@@ -114,18 +114,18 @@ class Player(pygame.sprite.Sprite):
 
         #Sets the speed of the Player class
         self.speedx = 0
-        self.speedy = 0
+        #self.speedy = 0
 
         #Takes key presses as inputs to alter player speed/movements
         keystate = pygame.key.get_pressed()
 
-        if keystate[pygame.K_UP] or keystate[pygame.K_w]:
+        #if keystate[pygame.K_UP] or keystate[pygame.K_w]:
 
-            self.speedy = 5
+        #    self.speedy = 5
 
-        if keystate[pygame.K_DOWN] or keystate[pygame.K_s]:
+        #if keystate[pygame.K_DOWN] or keystate[pygame.K_s]:
 
-            self.speedy = -5
+        #    self.speedy = -5
 
         if keystate[pygame.K_LEFT] or keystate[pygame.K_a]:
 
@@ -182,20 +182,20 @@ class Mob(pygame.sprite.Sprite):
         self.rot_speed = random.randrange(-8, 8)
         self.last_update = pygame.time.get_ticks()
 
-    def rotate(self):
+    #def rotate(self):
 
-        now = pygame.time.get_ticks()
+    #    now = pygame.time.get_ticks()
 
-        if now - self.last_update > 50:
+     #   if now - self.last_update > 50:
 
-            self.last_update = now
-            self.rot = (self.rot + self.rot_speed) % 360
+      #      self.last_update = now
+      #      self.rot = (self.rot + self.rot_speed) % 360
 
-            new_image = pygame.transform.rotate(self.image, self.rot)
-            old_center = self.rect.center
-            self.image = new_image
-            self.rect = self.image.get_rect()
-            self.rect.center = old_center
+       #     new_image = pygame.transform.rotate(self.image, self.rot)
+        #    old_center = self.rect.center
+        #    self.image = new_image
+       #     self.rect = self.image.get_rect()
+         #   self.rect.center = old_center
 
     def update(self):
 
