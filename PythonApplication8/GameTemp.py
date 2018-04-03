@@ -38,3 +38,6 @@ while running:
     pygame.display.flip()
 
 sys.exit()
+
+#This is a template for pygame games which I made to use in other pygame games; use it
+#yourslef if you'd like.
